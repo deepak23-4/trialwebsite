@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="position.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Position Property</title>
+  </head>
+  <body>
+    <h1>Position and z-index property</h1>
+    <div class="intro">
+      <u>Purpose of Position property</u> <br>
+      CSS Position property is used to position an element on a webpage/ HTML document.
+      In order to use CSS position property we apply 5 different values they are :
+      <ol>
+        <li>Static</li>
+        <li>Relative</li>
+        <li>Absolute</li>
+        <li>Fixed</li>
+        <li>Sticky</li>
+      </ol>
+      <br>
+      <strong>
+        While using CSS Position property, it is compulsory to use left, right, top, bottom and z-index properties without them we cannot set position property on a webpage. <br>
+        If we have not assigned any position to any element on a web document so by default its position will be static and it will not be impacted by left, right, top, bottom property </strong>
+        <br>
+    </div>
+    <br>
+    <dl>
+
+      <dt> <u>Static position</u> </dt>
+      <dd>HTML elements display as they appear in the normal document flow <br>
+          <strong>By default all HTML properties are set to static</strong> <br>
+          As the name suggest (static) static elements cannot be moved i.e, static elements are not affected by top, bottom, left, right or z-index properties</dd>
+          <br>
+          <div class="static">
+            <div class="static-1">
+              div1
+            </div>
+          </div>
+          <br>
+          <hr color="red"width="75%"align="right"size="4">
+          <br>
+      <dt> <u>Relative position</u> </dt>
+      <dd> Relative position is used to move an element relative it its original/normal position, it doesn't matter when the HTML element is present on the document flow, the position property will work at the same place where it is applied. .  </dd>
+    </dl>
+    <div class="relative">
+      <div class="relative-1">
+        div2
+      </div>
+    </div>
+    <br>
+    <dl>
+      <hr color="red" width=75% align="center">
+      <br>
+      <dt> <u>Absolute position</u> </dt>
+      <dd>  Absolute position is used to position an HTML element relative to the edge of its first positioned ancestor or relative to the edge of the browser's viweport <br>
+            An ancestor could either be a parent element, a grant parent or a grant-grant parent  <br>
+            In order to position an HTML element with respect to its ancestor, we have to assign "position:relative" to the parent element or to a grant parent and "position:absolute" to the HTML element which we want to move. <br>
+            If we have not assigned or positioned an ancestor than the HTML element will be positioned as per the edge of the browser's viewport.</dd>
+      </dl>
+      <div class="grant-parent">
+        <div class="parent">
+          <div class="element">
+            HTML element
+          </div>
+        </div>
+      </div>
+      <dl>
+        <br>
+        <br>
+        <hr color="red" width="75%">
+        <br>
+        <dt><u>Fixed position</u> </dt>
+          <dd>Fixed position is used to pin or fix the position of an HTML element relative to the edge of the browser's viewport.
+          <iframe src="position-fixed.html" width="100% " height="400vh"></iframe> <br>
+          When we assign a position "fixed" to an HTML element, div gets converted from block level element to inline block,  <br>
+          The HTML element gets taken out of its normal position. <br>
+          Since the HTML element is taken out of its normal position so some content below the nav-bar will be hidden behind the HTML element (nav-bar) <br>
+          In order to get those hidden content visible again we need to use the padding-top property. <br>
+        </dd>
+      </dl>
+      <br>
+      <hr color="red" width="75%">
+      <br>
+      <dl>
+        <dt> <u>Sticky position</u> </dt>
+        <dd>Sticky position is used to stick the html element to the top of the page <br>
+          In case if the gap or the distance between top edge of the browser and the html element (nav-bar) becomes zero so the nav-bar should be fixed or stuck to that position <br>
+          To make the position sticky along with "position:sticky" property we need to use "top:0px" to stick to the top edge of the browser.</dd>
+      </dl>
+      <iframe src="position-sticky.html" width="100%" height="400vh"></iframe>
+      <br>
+      <br>
+      <hr color="red" width="75%" align="center">
+      <br>
+      <dl>
+        <dt> <u>z-index property</u> </dt>
+        z-index property is used to control the display of <u>overlapping positioned HTML element</u>. <br>
+        When we are positioning an HTML element using position property they may get overlapped so in order to decide which one to display in front and which one to keep behind we use z-index property. <br>
+        In order to use z-index property both the html element should be positioned using position property.
+        <br>
+        <strong>An HTML element with lower z-index value is displayed behind the HTML element with higher z-index value value</strong>
+        <div class="parent">
+          <div class="red">
+            Red
+          </div>
+          <div class="green">
+            Green
+          </div>
+          <div class="blue">
+            Blue
+          </div>
+        </div>
+      </dl>
+  </body>
+</html>

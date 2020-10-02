@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <link rel="stylesheet" type="text/css" href="transition.css">
+    <title>Transition property</title>
+  </head>
+  <body>
+    <h1 class="main-heading">Transition Property</h1>
+    <br>
+    <strong><dl>
+      <dt>Transition</dt>
+      <dd>Transition means changing the state on an HTML element smoothly <br>
+      Using CSS transition property we can move an HTML element smoothly instead of a sudden move. </dd>
+      </dl></strong>
+      <br>
+      <br>
+      In order to use the transition property, there are five different transition functions we use and they are :
+      <ol>
+        <li>transition-property</li>
+        <li>transition-duration</li>
+        <li>transition-delay</li>
+        <li>transition-timing-function</li>
+        <li>shorthand property</li>
+      </ol> <br>
+      <dl class="definitions">
+        <dt><strong>transition-property</strong> </dt>
+        <dd>CSS properties on which we need to apply transition properties, we can keep a comma separated css properties to transition them together <br>
+        <u>Syntax</u>: transition-property:all/ none
+        </dd> <br>
+        <dt> <strong>transition-duration</strong> </dt>
+        <dd>The amount of time for which we want to apply the transition effect, it can be in seconds (s) or milli-seconds (ms), we can use more than one comma separated css properties to apply the transition effect <br>
+        <u>Syntax</u>:transition-duration:2s </dd> <br>
+        <dt> <strong>transition-delay</strong> </dt>
+        <dd>It causes the delay in order to show the transition effect by the number of seconds assigned to it <br>
+        <u>Syntax</u>: transition-delay:2s </dd> <br>
+        <dt> <strong>transition-timing-function</strong> </dt>
+        <dd>It uses certain inbuilt transition functions to make the HTML elements behave in a particular way <br>
+        The inbuilt transition functions associated with transition-timing-functions are : <br>
+        <ol>
+          <li>ease : slow start then fast then end slowly	</li>
+          <li>linear: same speed from start to end </li>
+          <li>ease-in: slow start	</li>
+          <li>ease-out: slow end </li>
+          <li>ease-in-out: slow start then regular speed then slow end </li>
+          <li>step-start: It reaches to initial step/ position as soon as it starts from where the animation should begin </li>
+          <li>step-end: it reaches to final step/ position as soon as it starts to where the animation should end. </li>
+          <li>steps(): we can customise the no. of steps. e.g, transition-timing-function: steps(4)</li>
+          <li>cubic-bezier: we can define out own speed of transition. e.g,	transition-timing-function: cubic-bezier(1,0.2,0.8,2); </li>
+        </ol></dd> <br>
+        <dt> <strong>shorthand property</strong> </dt>
+        <dd>shorthand property is used to save time and put all the other transition properties together using comma separated values <br>
+          short-hand properties has to be applied in a specific format i.e, <strong>transition : property, duration, timing-function, delay</strong>
+        </dd>
+        <br>
+        <div class="baap">
+          <div class="beta">
+            content
+          </div>
+        </div>
+
+      </dl>
+
+  </body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="selectors.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <title>Attribute selector</title>
+  </head>
+  <body>
+    <h1>Attribute selectors</h1> <br><br><br>
+
+    Attribute selector is used to select HTML element based on their attribute name and attribute value <br>
+    In CSS, you can use attribute selector to target HTML elements with certain attributes <br>
+    <span class="code">Attribute selectors</span> are case sensitive by default and are written inside brackets [ &nbsp; &nbsp;] <br>
+    They all start with the attribute name and end with an equal sign followed by the attribute value usually in quote. What goes in between the attribute name and equal sign is what makes the difference among the selectors <br> <br>
+    <u>Syntax</u>: <br>
+    <pre>
+      selector[attribute-expression]{
+        CSS declaration list;
+      }
+    </pre>
+    where, <strong>selector</strong> is optional, it can be a tag, class, id selector etc, <br>
+    <strong>attribute expression</strong> can be a valid combination of attribute name, value and associated operators. <br>
+    There are seven different types of selectors we can find and each one with a different syntax and they are :<br>
+    <ol>
+      <li>[attribute-name] selector</li>
+      <li>[attribute-name="attribute-value"] selector</li>
+      <li>[attribute-name^="attribute-value"] selector</li>
+      <li>[attribute-name~="attribute-value"] selector</li>
+      <li>[attribute-name*="attribute-value"] selector</li>
+      <li>[attribute-name|="attribute-value"] selector</li>
+      <li>[attribute-name$="attribute-value"] selector</li>
+    </ol>
+    <br> <br>
+    <span class="heading3">[attribute-name]</span> <br> <br>
+    The <span class="code">[attribute-name]</span> selector is used to select HTML element with a specified attribute or in other words it selects any HTML element which has an attribute name in it. <br>
+    <u>Example</u>: <br>
+    <pre>
+      [align]{
+        border: 2px solid red;
+      }
+    </pre>
+    It selects any HTML element targeted by the attribute name "align" and apply 2px solid red color border. <br><br> <br>
+
+    <span class="heading3">[attribute-name="attribute-value"]</span> <br> <br>
+    The <span class="code">[attribute-name="attribute-value"]</span> selector is used when we need to specify a particular HTML element or we can say when we don't want to target all the html element with the same attribute value. In order to target a particular HTML element we can use a specific selector like tag selector, id selector, class selector etc <br>
+    <pre>
+      p[align="right"]{
+        background-color:blue;
+      }
+    </pre>
+    It selects a &lt;p&gt; tag and targets an attribute "align" with a value right and style it with a background color blue.<br> <br> <br>
+
+    <span class="heading3">[attribute-name^="attribute-value"]</span> : Caret sign indicates "begin with"<br> <br>
+    The <span class="code">[attribute-name^=attribute-value}</span> selector is used to select HTML elements whose attribute value begins with a specified value. <br>
+    In other words, it selects any HTML elements targeted by the selector which contains an attribute name and whose value begins with the value specified in attribute expression <br><br>
+    <u>Example 1</u>: <br>
+    <pre>
+      a[href^="https://"]{
+        border= 2px solid blue;
+      }
+    </pre>
+    In this example, it selects any anchor tag which has a hyperlink "href" and whose value "begins with" https://
+    <u>Example 2</u>: <br>
+    <pre>
+      img[alt^="art"]{
+        border- 2px solid green
+      }
+    </pre>
+    here in example 2 it will select images with alt text "art show" or "artistic pattern" but not an image with the alt text "Arthur" or "Art" because "A" begins with a capital letter and Attribute selector is case sensitive. <br> <br>
+
+    <span class="heading3">[attribute-name$="attribute-value"]</span> : Dollar sign indicates "ends with" <br> <br> <br>
+    The <span class="code">[attribute-name$=attribute-value ]</span> selector is used to select elements whose attribute value ends with a specified value. <br>
+    In other words, it selects any HTML elements targeted by the selector which contains an attribute name and whose attribute value ends with a value specified in attribute expression. <br>
+    <u>Example 1</u>: <br>
+    <pre>
+      a[href$="tutorials"]{
+        border: 2px solid red;
+      }
+    </pre>
+    here in this example, it selects an anchor element that has an attribute name of href and it applies a border of red color if the attribute value ends with "tutorials"
+    <u>Example 2</u>: <br>
+    <pre>
+      div[class$="test"]{
+        background-color:yellow;
+      }
+    </pre>
+    here in this example. it selects a div tag which has a class attribute and style in yellow color if the attribute value ends with "test". <br> <br>
+
+    <span class="heading3">[attribute-name*="attribute-value"]</span>: Star sign indicates "contains" <br> <br> <br>
+    The <span class="code">[attribute-name*="attribute-value"]</span> selector is used to select elements whose attribute value contains a specified value in attribute expression. <br>
+    In other words, the attribute value contains a term as "only value, a value in a list of values or as part of another value" <br>
+    <u>Example 1</u>: <br>
+    <pre>
+      img[alt*="art"]{
+        background-color:purple;
+      }
+    </pre>
+    It selects images with the alt text "abstract art" and "athlete starting a new sport" because the value "art" is in the word "starting" as well <br>
+    <u>Example 2</u>: <br>
+    <pre>
+      a[href=".com"]{
+        background-color:pink;
+      }
+    </pre>
+    It selects an anchor tag that has a hyperlink href and it contains ".com" will be styled in pink color. <br> <br> <br>
+
+    <span class="heading3">[attribute-name~="attribute-value"]</span>: tilde indicates "value in a space separated list" <br>  <br>
+    The <span class="code">[attribute-name~="attribute-value"]</span> selector is used to select elements with an attribute value containing a specified word. <br>
+    In other words, Unlike the "contains" selector, this selector will not look for the value as a word fragment, as it will use the complete word as a "value is in a space-separated list" <br>
+    <u>Example 1</u>
+    <pre>
+      img[alt~="art"]{
+        border= 2px solid red;
+      }
+    </pre>
+    It will style with a red border to an image with the alt text "abstract art" or "art show" but not "athlete starting a new sport" (which the "contains" selector would select). <br> <br>
+
+    <u>Example 2</u>
+    <pre>
+      a[title~="my"]{
+        border: 2px solid blue;
+      }
+    </pre>
+    It will style the element with blue border when an anchor tag will have a title containing the word "my" <br> <br><br>
+
+    <span class="heading3">[attribute-name|="attribute-value"]</span>: pipe character indicates "begin with and immediately followed by (-)  sign" <br> <br>
+    This selector is very similar to the "begin with" selector. Here, the selector matches the value that is either the only value or its the first in a dash-separated list of values.
+    The <span class="code">[attribute-name|="attribute-value"]</span> selector is used to select elements with the specified attribute starting with a specified value. <br>
+    The value has to be a whole word, either alone, like class="top", or followed by a hyphen (-), like class="top-text", it is often used for language subcode matches.  <br>
+    In other words, It selects any html element targeted by selector which has an attribute name where the attribute value "begin with" a value specified in attribute expression & immediately followed by a hyphen (-) character. <br>
+    <u>Example</u>: <br>
+    <pre>
+      li[data-year|="1900"]{
+        border: 2px solid blue;
+      }
+    </pre>
+    It selects list items with an attribute name "data-year" has a value of "1900" and style it with 2px blue border. <br> <br>
+    <u>Example</u>: <br>
+    <pre>
+      a[title|="en-us"]{
+        border: 2px solid green;
+      }
+    </pre>
+    It selects an anchor element that has a title with a value of "en-us" and applies a border of 2 px blue color.
+
+
+
+  </body>
+</html>

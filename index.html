@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="gradient.css" type="text/css">
+      <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Ubuntu:ital,wght@0,300;0,400;1,300;1,500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <h1 style="text-align:center">Linear gradient</h1>
+
+      <h3>What is Gradient property</h3>
+      When we want to use more than one color in the background of a webpage we use Gradient property. We can assign multiple colors while setting up the gradient property as a background.
+
+      <h3>Types of gradients and their syntax</h3>
+      <ol>
+        <li>Linear gradient</li>
+        <li>Repeating linear gradient</li>
+        <li>Radial gradient</li>
+        <li>repeating radial gradient</li>
+      </ol>
+      <dl> <br> <br> <!---description list---->
+        <dt> <strong>Linear gradient</strong> </dt>  <!---description term/name--->
+          <dd> Linear Gradient is used to create a background consisting of transition between 2 or more color along a straight line. <br>
+            We can assign it from right to left, left to right, top to bottom and bottom to top  <br>
+            We can assign the colors using different angles in degrees. <br>
+            We can set the colors diagonally <br>
+          </dd>
+          <ul>
+          <strong>  background:linear-gradient(direction,color-stop1,color-stop2,color-stopn....last-color-stop); <br>
+            background-image:linear-gradient(direction,color-stop1,color-stop2,color-stopn.....last-color-stop); <br></strong>
+            background-image:linear-gradient(red,blue,yellow,green); <br>
+            background-image:linear-gradient(to top,red,blue,yellow,green); <br>
+            background-image:linear-gradient(to bottom right, pink,green,red,gray); <br>
+            background-image:linear-gradient(45deg,black,white,brown,magenta); <br>
+            background-image:linear-gradient(to right,red 0%,red 25%,blue 25%,blue 50%, green 50%, green 75%, purple 75%, purple 100%);
+          </ul>
+          <div class="linear-gradient">
+          </div>
+          <br>
+          <br>
+          <dl>
+            <dt> <strong>Repeating-linear-gradient</strong> </dt>
+              <dd> repeating-linear-gradient is used to create linear gradient repeatedly <br>
+                   This gradient property is helpful in achieving colors repeatedly <br>
+                   We can assign 2 or more colors in repeated function
+              </dd>
+            <ol>
+            <strong><li>background:repeating-linear-gradient(direction,color-stop1,color-stop2,color-stopn....last-color-stop)</li>
+              <li>background-image:repeating-linear-gradient(direction,color-stop1,color-stop2,color-stopn....last-color-stop)</li></strong>
+              <li>background-image:repeating-linear-gradient(black 0%,black 20%,white 20%,white 40%);</li>
+              <li>background-image:repeating-linear-gradient(to left,pink 0%,pink 10%,white 10%, white 20%);</li>
+              <li>background-image:repeating-linear-gradient(to bottom,blue 0%,blue 10%,gray 10%,gray 20%);</li>
+              <li>background-image:repeating-linear-gradient(45deg,red 0%, red 15%,white 15%,white 30%);</li>
+              <li>background-image:repeating-linear-gradient(45deg,red 0px, red 15px,white 15px,white 30px);</li>
+              <li>background-image:repeating-linear-gradient(to bottom left,red 0%, red 15%,white 15%,white 30%);</li>
+            </ol> <br>
+              <div class="repeating-linear-gradient">
+              </div>
+            </dl> <br><br>
+            <dl>
+              <dt><strong>Radial-gradient</strong> </dt>
+              <dd> <!---description definition*--->
+                    radial-gradient is used to create a background image/ background consisting of transition between 2 or more color that radiates from a given origin point.
+                    Here the radial-gradient has an origin point unlike the linear gradient which starts from one whole side <br>
+                    The radial point could be in the center of the background image <br>
+                    The radial point could be at either of the side like top left, top center, top right or center left, center center center right. bottom left, bottom center, bottom right <br>
+                    The radial point could also be defined in offset-x-px, offset-y-px, offset-x-%, offset-y-% <br>
+              </dd>
+            </dl>
+            <i> <u>Syntax:</u> </i> <br>
+                  background-image:radial-gradient(shape at position,color-stop1,color-stop2,color-stopn,...last-color-stop); <br>
+                  background:radial-gradient(shape at position,color-stop1,color-stop2,color-stopn,...last-color-stop); <br>
+                  <strong>Example:</strong> <br>
+                  background-image:radial-gradient(circle at center center,red 0%,blue 100%)
+                  <u>shape</u>: It indicates shape of gradient i.e., circle or ellipse. <br>
+                  <u>position</u>: It indicates the position of gradient i.e., top left, top center, top right or center left, center center center right. bottom left, bottom center, bottom right <br>
+                  <strong>color-stop: color-position</strong> <br>
+                  <u>color</u>: color name, hex color value, rgb(0-255,0-255,0-222), rgba(0-255,0-255,0-255,0-1). <br>
+                  <u>position</u>: px, %
+                  <br>
+                  <ol>
+                    <li>background-image: radial-gradient(circle at top center,red 0%,blue 100%);</li>
+                    <li>background-image: radial-gradient(circle at top right,red 0%,blue 100%);</li>
+                    <li>background-image: radial-gradient(circle at top right,red 0%,blue 100%);</li>
+                    <li>background-image:radial-gradient(circle at center left,red 0px,blue 100px);</li>
+                    <li>background-image: radial-gradient(circle at center center,red 0px,blue 100px);</li>
+                    <li>background-image: radial-gradient(circle at center right,red 0px,blue 100px);</li>
+                    <li>background:radial-gradient(ellipse at center center,red 0%,blue 100%);</li>
+                    <li>background:radial-gradient(ellipse at top center,red 0%, blue 100%);</li>
+                    <li>background:radial-gradient(ellipse at bottom left,red 0%, blue 100%);</li>
+                    <li>background:radial-gradient(ellipse at bottom left,red 0px, blue 100px);</li>
+                    <li>background:radial-gradient(ellipse at top right, cyan 0%,green 25%,orange 50%,blue 75%,red 100%);</li>
+                  </ol>
+            <div class="radial-gradient">
+
+            </div>
+            <br>
+            <br>
+            <div class="linear-ex1">
+
+            </div>
+            <br>
+            <br>
+            <div class="radial-ex1">
+
+            </div>
+            <br> <br>
+            offset-x-axis and offset-y-axis <br>
+            <div class="radial-ex2">
+
+            </div>
+    </body>
+  </html>
