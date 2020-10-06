@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta cahrset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="selectors.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <title>Animation Property</title>
+  </head>
+  <body>
+    <h1>Animation property</h1>
+
+    <span heading3>The animation property helps us to animate any HTML element</span> <br> <br>
+    In order to animate an HTML element we need to use certain CSS properties which are : <br>
+    <ol>
+      <li>animation-name </li>
+      <li>animation duration </li>
+      <li>animation-timing-function</li>
+      <li>animation-delay</li>
+      <li>animation-iteration-count</li>
+      <li>animation-direction</li>
+      <li>animation-fill-mode</li>
+      <li>animation-play-state</li>
+      <li>animation</li>
+    </ol>
+    <br>
+    <dl>
+      <dt><strong>animation-name</strong> </dt>
+      <dd>This CSS property is created to define or assign a name to the animation property <br>
+        It should not have any space while assigning any animation name rather we can use underscore, hyphen or Camel casing convention <br>
+      <u>Syntax</u>: animation-name:any-name </dd> <br>
+      <dt><strong>animation duration</strong> </dt>
+      <dd>This property is created to assign a particular time duration for an HTML element while getting animated or how long do we need to run the animation <br>
+      <u>Syntax</u>: animation-duration:2s </dd> <br>
+      <dt><strong>Animation-timing-function </strong> </dt>
+      <dd>It helps us to set the smoothness to our HTML element which we are animating, it has certain properties and values which we use to make it work and they are:  <br>
+        <br>
+        <ol>
+          <li>ease : slow start then fast then end slowly <br>
+            transition-timing-function:ease;</li>
+          <li>linear : same speed from start to end <br>
+            transition-timing-function: linear;	</li>
+          <li>ease-in : slow start <br>
+            transition-timing-function: ease-in; </li>
+          <li>ease-out : slow end	<br>
+            transition-timing-function: ease-out; </li>
+          <li>ease-in-out : slow start then regular speed then slow end <br>
+            transition-timing-function: ease-in-out; </li>
+          <li>step-start : It reaches to initial step/ position as soon as it starts from where the animation should begin <br>
+            transition-timing-function: step-start	;</li>
+          <li>step-end : it reaches to final step/ position as soon as it starts to where the animation should end. <br>
+            transition-timing-function: step-end;	</li>
+          <li>steps( ) : we can customise the no. of steps <br>
+             transition-timing-function: steps(4) </li>
+          <li>cubic-bezier : we can define our own speed of transition <br>
+             transition-timing-function: cubic-bezier(1,0.2,0.8,2); </li>
+        </ol>
+       </dd>
+       <br><br>
+       <dt><strong>animation-delay</strong> </dt>
+       <dd>It helps us to define by how much time an animation should delay <br>
+       <u>Syntax</u>: animation-delay:5s;</dd>
+       <br>
+       <dt><strong>animation-iteration-count</strong> </dt>
+       <dd>It helps us define how many times we need to run the animation e.g, 3,4 or infinite <br>
+       <u>Syntax</u>: animation-iteration-count:3</dd> <br>
+       <dt><strong>animation-direction</strong> </dt>
+       <dd>It defines how do we need to run the animation and it has differrent properties which are : <br>
+         <ol>
+           <li>normal : The animation works normally basis the animation properties used on it </li>
+           <li>reverse : It starts from the end point where the animation ends & it comes back to the origin point from where the animation actually started. It works in anti-clockwise direction </li>
+           <li>alternate : It starts from 0 & goes to 100 & then start from 100 & comes back to 0.	</li>
+           <li>alternate-reverse : It starts from reverse which means it starts from 100 and comes back to 0 then it goes from 0 to 100. </li>
+         </ol>
+       </dd>
+       <dt> <strong>animation</strong> </dt>
+       <dt>This is a shorthand property for animation which helps to apply all the above 6 animation properties together.</dt>
+    </dl>
+    <br>
+    <strong><u>Note</u>: In order to use all the above mentions animation properties we use a special selector which is "@keyframes" </strong> <br>
+    <u>Syntax</u>: <br>
+    @keyframes animation-name{ <br>
+                    from{CSS property} <br>
+                    to{CSS property} <br>
+          } <br>
+          <br>
+    or <br>
+    <br>
+    @keyframes animation-name{ <br>
+      0%{CSS properties} <br>
+      100%{CSS properties} <br>
+    } <br>
+    <br>
+    <div class="animation">
+      <div class="example">
+        Kuch bhi text
+      </div>
+    </div>
+  </body>
+</html>

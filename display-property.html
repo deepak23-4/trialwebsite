@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="selectors.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <title>Display Property</title>
+  </head>
+  <body>
+    <h1>CSS display property</h1> <br><br><br>
+    The Display property decides how an HTML element behaves or it specifies the display behaviour of an element. <br>
+    Display property changes the behaviour of an HTML element or we can say Display property gives the power to HTML element to behave differently from their nature. <br>
+    For e.g, <br>
+    it can give div a power of table so div will start to behave like a table <br>
+    It gives span a power of div so now span will start to behave like a div <br>
+    <br>
+    The number of property values which we use most of the times are : <br>
+    <ol>
+      <li>none</li>
+      <li>inline</li>
+      <li>block</li>
+      <li>inline-block</li>
+      <li>list-item</li>
+    </ol>
+    <br> <br>
+    <dl>
+      <dt> <strong>display:none</strong> </dt>
+      <dd> This value hides the HTML element on the web-page, it doesn't delete the HTML content just hide it and the element below will take its place </dd>
+           This property comes handy when we are using javascript or while creating hover effect. <br>
+           <u>Syntax</u>: <br>
+           <pre>
+             h1{
+               display: none;
+             }
+           </pre>
+           Say, If we have elements like h1, h2, div, p so it will hide h1 tag basis the syntax used above
+    </dl>   <br><br>
+    <dl>
+      <dt> <strong>display:inline</strong> </dt>
+      <dd>The property "display:inline" is used to change the behaviour of an HTML element from block level element to inline element.</dd>
+        <u>Syntax</u>: <br>
+        <pre>
+          li{
+            display:inline
+          }
+        </pre>
+        As we know that &lt;li&gt; tag is a block level tag, it occupies the complete width so the above syntax will help to change a block level element into an inline element <br>
+    </dl>  <br><br>
+    <dl>
+      <dt> <strong>dispay:block</strong> </dt>
+      <dd>This property is used on HTML elements which are by default inline elements and we want to change their behaviour from inline to block level elements, In other words it give the power of div tag to a span tag </dd> <br>
+        <u>Syntax</u>:
+        <pre>
+          span{
+            display:block;
+          }
+        </pre>
+        <strong>usually inline properties are used on tags which are text related tags like span, heading, paragraph, anchor, bold, italic <br>
+        The properties such as margin, padding, width, they don't works correctly on inline elements if you want to assign any of these property values than the HTML element must be assigned as a block level element. </strong>
+      </dl> <br><br>
+    <dl>
+      <dt> <strong>display:inline-block</strong> </dt>
+      <dd>The property "display:inline-block" is used when we want to keep the behaviour of an inline element as inline element however also it accepts the functionality of block element which means it accepts the text related tags like padding, margin, width etc</dd>
+      <u>Syntax</u>: <br>
+      <pre>
+        display:inline-block;
+        width: 20%;
+        padding: 1%;
+        margin: 1%;
+      </pre>
+      It is helpful in case when you want to assign width, padding, margin properties to an inline elements as normally it doesn't work with display:inline however if we use display: inline-block, it will work fine <br>
+    </dl><br><br>
+    <dl>
+      <dd> <strong>display:list-item</strong> </dd>
+      <dt> This property helps to change the behaviour of an any HTML element to list item (li tag).<br>
+            Since this display property changes the behaviour of any HTML element to list items so it will behave in the exact same manner as list-item property behaves including all the properties like list-style-image, list-style-position etc.</dt>
+            <u>Syntax</u>:
+            <pre>
+              span{
+                display: list-item;
+              }
+            </pre>
+
+    </dl> <br><br>
+
+  </body>
+<html>

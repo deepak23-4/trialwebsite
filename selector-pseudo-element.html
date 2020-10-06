@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang= "en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="selectors.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <title>Pseudo elements</title>
+    <script src="https://kit.fontawesome.com/7c4a26a0de.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1>Pseudo element selector</h1> <br> <br> <br>
+    <span class="code">Pseudo element</span> allows you to style a specific part of an element for example, it can be used to : <br> <br>
+
+    <ol>
+      <li>Style the first letter, or line, of an element</li>
+      <li>Insert content before, or after, the content of an element</li>
+    </ol>
+    <br> <br>
+
+    <span>Pseudo-elements are added to the selector using (::) symbol</span> <br>
+    <span>Pseudo-elements</span> allow us to apply styles to certain part of HTML elements and generate content dynamically at run time  <br>
+    Some of the widely used pseudo elements are : <br>
+    <ol>
+      <li>::first-letter</li>
+      <li>::first-line</li>
+      <li>::selection</li>
+      <li>::before</li>
+      <li>::after</li>
+    </ol> <br>
+    <u>Syntax</u>: <br>
+    <pre>
+      selector::pseudo-element-name{
+        CSS declaration list;
+      }
+    </pre>
+    <span class="heading3">::first-letter</span>: <br> <br>
+    The <span class="heading3">::first-letter</span> can only be applied to block-level element and is used to style the first letter of the HTML element. <br> <br>
+    The following properties apply to the <span class="code">::first-letter</span> pseudo-element:
+    <ul>
+      <li>font-properties</li>
+      <li>color-properties</li>
+      <li>background properties</li>
+      <li>margin properties</li>
+      <li>padding properties</li>
+      <li>border properties</li>
+      <li>text-decoration</li>
+      <li>text-transform</li>
+      <li>line-height</li>
+      <li>clear</li>
+      <li>float</li>
+      <li>vertical-align (only if "float" is :none)</li>
+    </ul>
+    <br>
+    <u>Example</u>:
+    <pre>
+      p::first-letter{
+        font-size:2.5em;
+      }
+    </pre>
+    <br>
+    <span class="heading3">::first-line</span>: <br> <br>
+    The <span class="code">::first-line</span> pseudo-element can only be applied to block-level elements and is used to add a special style to the first line of a text. <br> <br>
+    The following properties apply to the <span class="code">::first-line</span> pseudo-element: <br>
+    <ul>
+      <li>font properties</li>
+      <li>color properties</li>
+      <li>background properties</li>
+      <li>word-spacing</li>
+      <li>letter-spacing</li>
+      <li>text-decoration</li>
+      <li>vertical-align</li>
+      <li>text-transform</li>
+      <li>line-height</li>
+      <li>clear</li>
+    </ul>
+    <br>
+    <u>Example</u>: <br>
+    <pre>
+      .para2::first-line{
+				text-decoration: underline;
+				text-transform: uppercase;
+				color:crimson;
+				line-height: 1.5em;
+				background-color: gray;
+			}
+    </pre>
+    <br>
+    <span class="heading3">::selection</span> <br> <br>
+    The <span class="code">::selection</span> pseudo element matches the portion of an element that is selected by a user. <br>
+    When we use the property <span class="code">::selection</span> it changes or highlights the color of the selected content <br> <br>
+
+    The following CSS properties can be applied to <span class="code">::selection</span> which are : <br>
+    <ul>
+      <li>color properties</li>
+      <li>background properties</li>
+      <li>cursor</li>
+      <li>outline</li>
+    </ul>
+    <br>
+    <u>Example</u>:
+    <pre>
+      .para3::selection{
+				color:red;
+				background-color: black;
+			}
+    </pre>
+    <br>
+    <span class="heading3">::before</span> <br> <br>
+    The <span class="code">::before</span> pseudo-element is used to insert some content before the content on an HTML element <br>
+    <u>Syntax</u>:
+    <pre>
+      selector::before{
+        content:"attribute value "
+      }
+    </pre>
+    wherein, <span class="code">content</span> is a CSS property which we can use to style text or image almost any way we want. <br>
+    and <span class="code">"attribute value"</span> is a <span class="code">string</span>, string means "sequence of characters enclosed in double quotations". <br>
+    <u>Example</u>: <br>
+    <pre>
+      ul li::before{
+        content:"Hello "
+      }
+    </pre>
+    <br>
+    <span class="heading3">::after</span> <br> <br>
+    The <span class="code">::after</span> pseudo-element is used to insert content after the content on an HTML element <br>
+    <u>Syntax</u>:
+    <pre>
+      selector::after{
+        content:" attribute value"
+      }
+    </pre>
+    <u>Example</u>:
+    <pre>
+      ol li::after{
+        content:" HTML"
+      }
+    </pre>
+    <u> Example using image</u>
+    <pre>
+
+      ul li::before{
+		  content:url("resize_twitter.png ");
+	          margin: 10px;
+		  }
+    </pre>
+    <br>
+  </body>
+
+</html>
